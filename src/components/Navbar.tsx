@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
-  const [nav, setNav] = useState(true);
+  const [nav, setNav] = useState(false);
   return (
     <header className="sticky top-0 z-50 h-[80px] w-full bg-slate-50 shadow-sm">
       <nav className="container relative mx-auto flex h-full w-full items-center">
@@ -55,15 +55,18 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`tran absolute right-0 top-[80px] flex min-h-screen w-[70%] flex-col items-center justify-center gap-6 bg-slate-100 sm:hidden ${nav ? "" : "right-[-100%]"}`}
+          className={`absolute right-0 top-[80px] ${nav ? "flex flex-col items-center justify-center gap-6" : "hidden"} min-h-screen w-[70%] bg-slate-100 sm:hidden`}
         >
           {links.map((link) => (
             <Link
               href={link.to}
               key={link.name}
-              className={cn("py-2 uppercase text-slate-600", {
-                "text-indigo-800": pathname === link.to,
-              })}
+              className={cn(
+                "mx-auto w-[90%] py-2 text-center uppercase text-slate-600 hover:bg-teal-500 hover:text-white",
+                {
+                  "text-indigo-800": pathname === link.to,
+                },
+              )}
             >
               {link.name}
             </Link>

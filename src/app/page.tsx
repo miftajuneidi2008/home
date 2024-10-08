@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <section className="mx-1">
       <Banner />
+
       <Forsale />
       <Forrent />
     </section>
