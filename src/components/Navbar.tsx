@@ -6,16 +6,22 @@ import Button from "./Button";
 import { links } from "./data";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { roboto_mono } from "@/app/fonts/font";
 const Navbar = () => {
   const pathname = usePathname();
   const [nav, setNav] = useState(false);
   return (
-    <header className="sticky top-0 z-50 h-[80px] w-full bg-slate-50 shadow-sm">
+    <header
+      className={`${roboto_mono.className} sticky top-0 z-50 h-[80px] w-full bg-slate-50 shadow-sm`}
+    >
       <nav className="container relative mx-auto flex h-full w-full items-center">
         {/* for large devices */}
         <div className="hidden w-full items-center justify-between sm:flex">
           <div className="flex h-full w-full items-center gap-4">
-            <Link href={`/`} className="pr-4 text-xl font-bold text-blue-600">
+            <Link
+              href={`/`}
+              className="pr-3 text-xl font-bold text-blue-600 lg:text-2xl"
+            >
               Birra Home
             </Link>
             {links.map((link) => (
@@ -23,7 +29,7 @@ const Navbar = () => {
                 href={link.to}
                 key={link.name}
                 className={cn(
-                  "rounded-md px-3 py-[6px] uppercase text-slate-600 hover:bg-teal-500 hover:text-white",
+                  "rounded-md px-2 py-[6px] uppercase text-slate-600 hover:bg-teal-500 hover:text-white md:px-3",
                   {
                     "text-indigo-800": pathname === link.to,
                   },
@@ -55,7 +61,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`absolute right-0 top-[80px] ${nav ? "flex flex-col items-center justify-center gap-6" : "hidden"} min-h-screen w-[70%] bg-slate-100 sm:hidden`}
+          className={`absolute right-0 top-[80px] ${nav ? "flex flex-col items-center gap-6" : "hidden"} min-h-screen w-[70%] bg-slate-100 sm:hidden`}
         >
           {links.map((link) => (
             <Link

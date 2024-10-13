@@ -11,7 +11,7 @@ type bannerProps = {
 };
 const Pagebanner = ({ title, desc, img, className }: bannerProps) => {
   return (
-    <div className={cn("bg-pink-100", className)}>
+    <div className={cn("", className)}>
       <div className="flex h-64 w-full justify-between">
         <div className="flex flex-col gap-4 px-8 py-10 sm:px-16 lg:px-32">
           <h1 className="max-w-xl text-xl font-semibold md:text-3xl lg:text-4xl">

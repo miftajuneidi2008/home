@@ -13,15 +13,40 @@ const page = () => {
         title="Explore a Wide Range of Houses Just for You"
         desc=" Find houses for sale near you. View photos, open house information,
           and property details for nearby real estate."
-        className="bg-cyan-100"
+        className="bg-gradient-to-r from-cyan-100"
       />
       <Container className="my-2 flex gap-1">
-        <div className="flex w-1/4 flex-col gap-3 bg-slate-50 p-3 text-blue-600">
-          <Link href={`/`}>Apartments</Link>
-          <Link href={`/`}>Realstate</Link>
-          <Link href={`/`}>condominium</Link>
-          <Link href={`/`}>Living Home</Link>
-          <Link href={`/`}>Shop</Link>
+        <div className="flex w-1/4 flex-col gap-3 bg-slate-50 p-3 text-center text-blue-600">
+          <Link
+            href={`/`}
+            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
+          >
+            Apartments
+          </Link>
+          <Link
+            href={`/`}
+            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
+          >
+            Realstate
+          </Link>
+          <Link
+            href={`/`}
+            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
+          >
+            condominium
+          </Link>
+          <Link
+            href={`/`}
+            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
+          >
+            Living Home
+          </Link>
+          <Link
+            href={`/`}
+            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
+          >
+            Shop
+          </Link>
         </div>
         <div className="w-3/4">
           <Grid />

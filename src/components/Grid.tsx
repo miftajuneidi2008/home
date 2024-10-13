@@ -2,11 +2,13 @@ import React from "react";
 
 import Image from "next/image";
 import { images } from "./data";
+import Link from "next/link";
 const Grid = () => {
   return (
     <div className="grid grid-cols-1 gap-3 py-6 sm:grid-cols-2 md:grid-cols-3">
       {images.map((img) => (
-        <div
+        <Link
+          href={`/homes/${img.index}`}
           className="transform cursor-pointer shadow-sm transition delay-150 duration-500 ease-in-out hover:scale-105"
           key={img.index}
         >
@@ -15,7 +17,7 @@ const Grid = () => {
             width={400}
             height={400}
             alt="home"
-            className="h-64"
+            className="h-64 rounded-md"
           />
           <div className="p-4">
             <p className="font-bold text-slate-700 sm:text-xl">
@@ -26,7 +28,7 @@ const Grid = () => {
             </p>
             <p className="text-slate-500">Adama,Ethiopia</p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
