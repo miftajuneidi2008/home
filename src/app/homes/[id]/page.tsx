@@ -13,9 +13,6 @@ import {
   TentTree,
   NotebookTabs,
 } from "lucide-react";
-const Maps = dynamic(() => import("@/components/Map"), {
-  ssr: false,
-});
 
 const page = () => {
   const Maps = dynamic(() => import("@/components/Map"), {

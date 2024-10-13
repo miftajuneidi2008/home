@@ -1,7 +1,7 @@
 import React from "react";
 import broker from "@/assets/images/broker.png";
 import Image from "next/image";
-import { lusitana, roboto_mono } from "../fonts/font";
+import { roboto_mono } from "../fonts/font";
 import Agents from "@/components/Agents";
 const page = () => {
   return (
@@ -12,7 +12,7 @@ const page = () => {
             <h1
               className={`max-w-[500px] bg-purple-500 bg-gradient-to-r from-blue-500 bg-clip-text text-xl font-bold text-transparent md:text-3xl`}
             >
-              We're Here to Help You Find Your Home.
+              We are Here to Help You Find Your Home.
             </h1>
             <p className="py-2 text-[18px] lg:py-6">
               Let Us Find Your Perfect Rental

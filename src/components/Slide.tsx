@@ -4,8 +4,7 @@ import { slides } from "./data";
 import Image from "next/image";
 
 const Slide = () => {
-  const [data, setData] = useState(slides);
-  const [images, setImages] = useState(data[0].images);
+  const [images, setImages] = useState(slides[0].images);
   return (
     <>
       <div className="h-[400px] w-full">
@@ -18,7 +17,7 @@ const Slide = () => {
         />
       </div>
       <div className="my-2 flex gap-2">
-        {data.map((datas) => (
+        {slides.map((datas) => (
           <Image
             src={datas.images}
             width={128}

@@ -5,7 +5,6 @@ import { agents } from "./data";
 import Image from "next/image";
 const AgentForm = () => {
   const [search, setSearch] = useState("location");
-  const [keys, setKeys] = useState("");
   const [data, setData] = useState(agents);
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSearch(event.target.value);
