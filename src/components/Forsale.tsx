@@ -87,7 +87,7 @@ const Forsale = () => {
           </div>
         </div>
       </div>
-      <Link href={`/`} className="text-blue-500">
+      <Link href={`/sell`} className="text-blue-500">
         Explore more
       </Link>
     </div>

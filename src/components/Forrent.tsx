@@ -88,7 +88,7 @@ const Forrent = () => {
           </div>
         </div>
       </div>
-      <Link href={`/homes`} className="text-blue-500">
+      <Link href={`/rent`} className="text-blue-500">
         Explore more
       </Link>
     </div>

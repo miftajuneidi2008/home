@@ -42,3 +42,10 @@ export const agents = [
   { name: "Balcha Safo", image: p7, location: "ButaJira", number: 7 },
   { name: "Kenna Debi", image: p8, location: "ButaJira", number: 8 },
 ];
+
+export const mapdata = [
+  { long: 7.219828911721969, lat: 38.580274703486324, number: 1 },
+  { long: 7.219743761555776, lat: 38.622417568268474, number: 2 },
+  { long: 7.185597254805131, lat: 38.63563549327143, number: 3 },
+  { long: 7.219999212006265, lat: 38.58902943303374, number: 4 },
+];

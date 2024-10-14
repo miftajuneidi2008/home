@@ -4,7 +4,12 @@ import bannersell from "@/assets/images/banner-sells.png";
 import Link from "next/link";
 import Grid from "@/components/Grid";
 import Pagebanner from "@/components/Pagebanner";
+import dynamic from "next/dynamic";
 const SellPage = () => {
+  const Maps = dynamic(() => import("@/components/mapDetail"), {
+    loading: () => <p>A map is loading</p>,
+    ssr: false,
+  });
   return (
     <section className="mx-2 my-1 h-full w-full">
       <Pagebanner
@@ -15,39 +20,10 @@ const SellPage = () => {
         className="bg-gradient-to-r from-pink-100"
       />
       <Container className="my-2 flex gap-1">
-        <div className="flex w-1/4 flex-col gap-3 bg-slate-50 p-3 text-center text-blue-600">
-          <Link
-            href={`/`}
-            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
-          >
-            Apartments
-          </Link>
-          <Link
-            href={`/`}
-            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
-          >
-            Realstate
-          </Link>
-          <Link
-            href={`/`}
-            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
-          >
-            condominium
-          </Link>
-          <Link
-            href={`/`}
-            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
-          >
-            Living Home
-          </Link>
-          <Link
-            href={`/`}
-            className="rounded-md border-[1px] border-slate-300 px-2 py-1"
-          >
-            Shop
-          </Link>
+        <div className="z-0 h-[400px] w-[40%] bg-slate-50 p-3">
+          <Maps posix={[7.1999992, 38.5999976]} />
         </div>
-        <div className="w-3/4">
+        <div className="w-[60%]">
           <Grid />
         </div>
       </Container>
