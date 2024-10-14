@@ -1,7 +1,6 @@
 import Container from "@/components/Container";
 import Grid from "@/components/Grid";
 import Pagebanner from "@/components/Pagebanner";
-import Link from "next/link";
 import React from "react";
 import bannersell from "@/assets/images/rent-banner.png";
 import dynamic from "next/dynamic";
